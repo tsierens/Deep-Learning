@@ -5,6 +5,7 @@
 
 import numpy as np
 import sys
+import time
 
 def empty_board():
     return np.zeros((6,7))
@@ -86,12 +87,16 @@ class player:
         return move
     
 class result(object):
-    def __init__(self,board,log):
+    def __init__(self,board,log,t1,t2):
         self.winner = winner(board)
         self.log = log
         self.board = board
+        self.p1_time = t1
+        self.p2_time = t2
 
 def play(player_1,player_2):
+    t1=0
+    t2=0
     player_dict = {1:'X', -1:'O', 0: ' '}    
     swap_dict = {'O':'X','X':'O'}
     log=[]
@@ -104,9 +109,13 @@ def play(player_1,player_2):
             if times_failed > 100:
                 sys.exit('Failed to make a legal move 100 times.')
             if active_turn == 1:
+                t0 = time.clock()
                 move = player_1.make_move(board,active_turn)
+                t1 += time.clock() - t0
             elif active_turn == -1:
+                t0 = time.clock()
                 move = player_2.make_move(board,active_turn)
+                t2 += time.clock() - t0
             if move-1 in available_moves(board):
                 board[np.where(board[:,move-1]==0)[0][-1],move-1] = active_turn
                 break
@@ -118,5 +127,5 @@ def play(player_1,player_2):
     else:
         print('Tie game!!!')
     '''
-    return result(board,log)
+    return result(board,log,t1,t2)
 
