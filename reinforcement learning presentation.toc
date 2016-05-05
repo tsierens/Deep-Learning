@@ -4,7 +4,7 @@
 \beamer@subsectionintoc {2}{1}{Simple Perceptron}{4}{0}{2}
 \beamer@subsectionintoc {2}{2}{Multilayer Perceptron}{7}{0}{2}
 \beamer@subsectionintoc {2}{3}{Convolutional Neural Network}{8}{0}{2}
-\beamer@sectionintoc {3}{Temporal Difference Learning}{10}{0}{3}
+\beamer@sectionintoc {3}{Reinforcement Learning}{10}{0}{3}
 \beamer@subsectionintoc {3}{1}{Temporal Difference Method}{10}{0}{3}
 \beamer@subsectionintoc {3}{2}{Stochastic Gradient Descent}{12}{0}{3}
 \beamer@sectionintoc {4}{Results}{13}{0}{4}

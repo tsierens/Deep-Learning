@@ -16,14 +16,14 @@
 \begin{itemize}
 \item Supervised Learning
 \begin{itemize}
-\item Have access to a large set of data with known desired results
-\item Adjust model parameters to minimize an objective function
+\item Have access to a large set of data with known desired results.
+\item Adjust model parameters to minimize an objective function.
 \end{itemize}
 \item Reinforcement Learning
 \begin{itemize}
-\item Have access to an environment that can be modeled
-\item Typically a reward function is used as a signal for how to adjust model parameters
-\item Board games present a natural environment that is easily modeled and can provide a reward whenever a game finishes.
+\item Have access to an environment that can be modeled.
+\item Typically a reward function is used as a signal for how to adjust model parameters.
+\item Board games present a natural environment that is easily modeled and can provide a reward whenever a game completes.
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -67,23 +67,23 @@
 
 \begin{frame}{Value Network}
 \begin{itemize}
-\item A value network is a neural network that evaluates an environment and determines a value to associate to it
-\item In the case of board games, a value network can be used to determine the probability of winning from any given position
-\item Here is an example of a multi-layered neural network in action
-\item The network takes a Tic Tac Toe board as input, and through a succession of node activations the network outputs a prediction on who will win, in this case: the red player
+\item A value network is a neural network that evaluates an environment and determines a value to associate to it.
+\item In the case of board games, a value network can be used to determine the probability of winning from any given position.
+\item Here is an example of a multi-layered neural network in action.
+\item The network takes a Tic Tac Toe board as input, and through a series of node activations the network outputs a prediction on who will win, in this case: the red player.
 \end{itemize}
 \begin{figure}
 \includegraphics[width=1. \textwidth]{network_weights}
 \end{figure}
 \end{frame}
 
-\section{Temporal Difference Learning}
+\section{Reinforcement Learning}
 \subsection{Temporal Difference Method}
-\begin{frame}{Temporal Difference Learning}
+\begin{frame}{Reinforcement Learning}
 \begin{itemize}
 \item TD($\lambda$) Equation
 \begin{itemize}
-\item When a terminal state occurs, the reward propagates to previous states and the targets are updated
+\item When a terminal state occurs, the reward propagates to previous states and the targets are updated.
 \end{itemize}
 \end{itemize}
 \begin{equation*}
@@ -91,11 +91,11 @@ T_n = \phantom{\sum_{n=0}^{N_0} }(1-\lambda)\phantom{\lambda^n} V_n + \lambda^{\
 \end{equation*}
 \end{frame}
 
-\begin{frame}{Temporal Difference Learning}
+\begin{frame}{Reinforcement Learning}
 \begin{itemize}
 \item TD($\lambda$) Equation
 \begin{itemize}
-\item When a terminal state occurs, the reward propagates to previous states and the targets are updated
+\item When a terminal state occurs, the reward propagates to previous states and the targets are updated.
 \end{itemize}
 \end{itemize}
 \begin{equation*}
