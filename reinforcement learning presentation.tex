@@ -78,10 +78,13 @@
 \end{frame}
 
 \section{Temporal Difference Learning}
-\subsection{}
+\subsection{Temporal Difference Method}
 \begin{frame}{Temporal Difference Learning}
 \begin{itemize}
 \item TD($\lambda$) Equation
+\begin{itemize}
+\item When a terminal state occurs, the reward propagates to previous states and the targets are updated
+\end{itemize}
 \end{itemize}
 \begin{equation*}
 T_n = \phantom{\sum_{n=0}^{N_0} }(1-\lambda)\phantom{\lambda^n} V_n + \lambda^{\phantom{N_0}} r
@@ -91,11 +94,20 @@ T_n = \phantom{\sum_{n=0}^{N_0} }(1-\lambda)\phantom{\lambda^n} V_n + \lambda^{\
 \begin{frame}{Temporal Difference Learning}
 \begin{itemize}
 \item TD($\lambda$) Equation
+\begin{itemize}
+\item When a terminal state occurs, the reward propagates to previous states and the targets are updated
+\end{itemize}
 \end{itemize}
 \begin{equation*}
 T_n = \sum_{n=0}^{N_0} (1-\lambda)\lambda^n V_n + \lambda^{N_0} r
 \end{equation*}
 \end{frame}
+\subsection{Stochastic Gradient Descent}
+
+\begin{frame}{Stochastic Gradient Descent}
+\includegraphics[width = 0.8 \textwidth]{sgd}\centering
+\end{frame}
+
 \section{Results}
 \subsection{}
 

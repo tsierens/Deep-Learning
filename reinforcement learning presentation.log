@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.2.24)  5 MAY 2016 09:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.2.24)  5 MAY 2016 10:51
 entering extended mode
 **reinforcement*learning*presentation.tex
 
@@ -1256,7 +1256,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 
 [3
 
-] <"simple neural net no lines".png, id=126, 993.7125pt x 767.86874pt>
+] <"simple neural net no lines".png, id=139, 993.7125pt x 767.86874pt>
 File: "simple neural net no lines".png Graphic file (type png)
 
 <use "simple neural net no lines".png>
@@ -1271,7 +1271,7 @@ Overfull \vbox (8.4809pt too high) detected at line 38
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
 ing/Deep-Learning/simple neural net no lines.png>]
-<"simple neural net half lines".png, id=151, 993.7125pt x 767.86874pt>
+<"simple neural net half lines".png, id=165, 993.7125pt x 767.86874pt>
 File: "simple neural net half lines".png Graphic file (type png)
 
 <use "simple neural net half lines".png>
@@ -1286,7 +1286,7 @@ Overfull \vbox (8.4809pt too high) detected at line 44
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
 ing/Deep-Learning/simple neural net half lines.png>]
-<"simple neural net all lines".png, id=176, 993.7125pt x 767.86874pt>
+<"simple neural net all lines".png, id=191, 993.7125pt x 767.86874pt>
 File: "simple neural net all lines".png Graphic file (type png)
 
 <use "simple neural net all lines".png>
@@ -1301,7 +1301,7 @@ Overfull \vbox (8.4809pt too high) detected at line 50
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
 ing/Deep-Learning/simple neural net all lines.png>]
-<"mlp all lines".png, id=201, 993.7125pt x 767.86874pt>
+<"mlp all lines".png, id=217, 993.7125pt x 767.86874pt>
 File: "mlp all lines".png Graphic file (type png)
 
 <use "mlp all lines".png>
@@ -1315,7 +1315,7 @@ Overfull \vbox (8.4809pt too high) detected at line 58
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
 ing/Deep-Learning/mlp all lines.png>]
-<"CNN".png, id=227, 993.7125pt x 767.86874pt>
+<"CNN".png, id=244, 993.7125pt x 767.86874pt>
 File: "CNN".png Graphic file (type png)
  <use "CNN".png>
 Package pdftex.def Info: "CNN".png used on input line 66.
@@ -1328,7 +1328,7 @@ Overfull \vbox (8.4809pt too high) detected at line 66
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
 ing/Deep-Learning/CNN.png>]
-<network_weights.png, id=252, 855.94781pt x 181.42781pt>
+<network_weights.png, id=270, 855.94781pt x 181.42781pt>
 File: network_weights.png Graphic file (type png)
 
 <use network_weights.png>
@@ -1342,60 +1342,69 @@ ing/Deep-Learning/network_weights.png>] [10
 ]
 [11
 
-] <reinforcement_ttt.png, id=333, 1156.32pt x 650.43pt>
-File: reinforcement_ttt.png Graphic file (type png)
-
-<use reinforcement_ttt.png>
-Package pdftex.def Info: reinforcement_ttt.png used on input line 106.
-(pdftex.def)             Requested size: 307.28987pt x 172.84944pt.
+] <sgd.png, id=353, 289.08pt x 223.3143pt>
+File: sgd.png Graphic file (type png)
+ <use sgd.png>
+Package pdftex.def Info: sgd.png used on input line 109.
+(pdftex.def)             Requested size: 245.83282pt x 189.90321pt.
  [12
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
-ing/Deep-Learning/reinforcement_ttt.png>]
-<reinforcement_c4.png, id=360, 1156.32pt x 650.43pt>
-File: reinforcement_c4.png Graphic file (type png)
+ing/Deep-Learning/sgd.png>] <reinforcement_ttt.png, id=380, 1156.32pt x 650.43p
+t>
+File: reinforcement_ttt.png Graphic file (type png)
 
-<use reinforcement_c4.png>
-Package pdftex.def Info: reinforcement_c4.png used on input line 112.
+<use reinforcement_ttt.png>
+Package pdftex.def Info: reinforcement_ttt.png used on input line 118.
 (pdftex.def)             Requested size: 307.28987pt x 172.84944pt.
  [13
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
+ing/Deep-Learning/reinforcement_ttt.png>]
+<reinforcement_c4.png, id=409, 1156.32pt x 650.43pt>
+File: reinforcement_c4.png Graphic file (type png)
+
+<use reinforcement_c4.png>
+Package pdftex.def Info: reinforcement_c4.png used on input line 124.
+(pdftex.def)             Requested size: 307.28987pt x 172.84944pt.
+ [14
+
+ <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
 ing/Deep-Learning/reinforcement_c4.png>]
-<round_robin.png, id=387, 803.25093pt x 794.97pt>
+<round_robin.png, id=436, 803.25093pt x 794.97pt>
 File: round_robin.png Graphic file (type png)
  <use round_robin.png>
-Package pdftex.def Info: round_robin.png used on input line 118.
+Package pdftex.def Info: round_robin.png used on input line 130.
 (pdftex.def)             Requested size: 215.10196pt x 212.88588pt.
 
-Overfull \vbox (1.00594pt too high) detected at line 118
+Overfull \vbox (1.00594pt too high) detected at line 130
  []
 
-[14
+[15
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
 ing/Deep-Learning/round_robin.png>]
-<performance.png, id=413, 1156.32pt x 650.43pt>
+<performance.png, id=463, 1156.32pt x 650.43pt>
 File: performance.png Graphic file (type png)
  <use performance.png>
-Package pdftex.def Info: performance.png used on input line 124.
+Package pdftex.def Info: performance.png used on input line 136.
 (pdftex.def)             Requested size: 307.28987pt x 172.84944pt.
- [15
+ [16
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
-ing/Deep-Learning/performance.png>] [16
+ing/Deep-Learning/performance.png>] [17
 
 ]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
 
 ("C:\Users\Todd\Dropbox\Data Incubator Challenge April\deep_learning\Deep-Learn
 ing\Deep-Learning\reinforcement learning presentation.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
 Package rerunfilecheck Info: File `reinforcement*learning*presentation.out' has
  not changed.
 (rerunfilecheck)             Checksum: <no file>.
@@ -1404,13 +1413,13 @@ Package rerunfilecheck Info: File `reinforcement*learning*presentation.out' has
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
  ) 
 Here is how much of TeX's memory you used:
- 23091 strings out of 493921
- 460476 string characters out of 3147285
- 508397 words of memory out of 3000000
- 25880 multiletter control sequences out of 15000+200000
+ 23105 strings out of 493921
+ 460630 string characters out of 3147285
+ 509376 words of memory out of 3000000
+ 25890 multiletter control sequences out of 15000+200000
  11735 words of font info for 43 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  58i,19n,60p,10525b,754s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1424,10 +1433,10 @@ pfb><C:/Program Files/MiKTeX 2.9reinstall/fonts/type1/public/amsfonts/cm/cmss10
 i10.pfb><C:/Program Files/MiKTeX 2.9reinstall/fonts/type1/public/amsfonts/cm/cm
 ssi8.pfb><C:/Program Files/MiKTeX 2.9reinstall/fonts/type1/public/amsfonts/cm/c
 msy10.pfb>
-Output written on "reinforcement learning presentation.pdf" (16 pages, 783244 b
+Output written on "reinforcement learning presentation.pdf" (17 pages, 871925 b
 ytes).
 PDF statistics:
- 506 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 558 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
