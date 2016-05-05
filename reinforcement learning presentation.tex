@@ -69,8 +69,6 @@
 \begin{itemize}
 \item A value network is a neural network that evaluates an environment and determines a value to associate to it.
 \item In the case of board games, a value network can be used to determine the probability of winning from any given position.
-\item Here is an example of a multi-layered neural network in action.
-\item The network takes a Tic Tac Toe board as input, and through a series of node activations the network outputs a prediction on who will win, in this case: the red player.
 \end{itemize}
 \begin{figure}
 \includegraphics[width=1. \textwidth]{network_weights}
@@ -80,11 +78,9 @@
 \section{Reinforcement Learning}
 \subsection{Temporal Difference Method}
 \begin{frame}{Reinforcement Learning}
+TD($\lambda$) Equation: 
 \begin{itemize}
-\item TD($\lambda$) Equation
-\begin{itemize}
-\item When a terminal state occurs, the reward propagates to previous states and the targets are updated.
-\end{itemize}
+\item[] When a terminal state occurs, the reward propagates to previous states and the targets are updated.
 \end{itemize}
 \begin{equation*}
 T_n = \phantom{\sum_{n=0}^{N_0} }(1-\lambda)\phantom{\lambda^n} V_n + \lambda^{\phantom{N_0}} r
@@ -92,11 +88,9 @@ T_n = \phantom{\sum_{n=0}^{N_0} }(1-\lambda)\phantom{\lambda^n} V_n + \lambda^{\
 \end{frame}
 
 \begin{frame}{Reinforcement Learning}
+TD($\lambda$) Equation: 
 \begin{itemize}
-\item TD($\lambda$) Equation
-\begin{itemize}
-\item When a terminal state occurs, the reward propagates to previous states and the targets are updated.
-\end{itemize}
+\item[] When a terminal state occurs, the reward propagates to previous states and the targets are updated.
 \end{itemize}
 \begin{equation*}
 T_n = \sum_{n=0}^{N_0} (1-\lambda)\lambda^n V_n + \lambda^{N_0} r
@@ -138,15 +132,10 @@ T_n = \sum_{n=0}^{N_0} (1-\lambda)\lambda^n V_n + \lambda^{N_0} r
 \subsection{}
 \begin{frame}[c]{Future Directions}\centering
 \begin{itemize}
-\item Apply to more games
-\begin{itemize}
-\item chess, hex, backgammon, go, video games, etc.
-\end{itemize}
 \item Route finding app
 \item Traffic prediction analysis
 \item Control (robots, self-driving cars, etc.)
 \item Prediction (stock prices, sports betting, etc.)
-\item Acquire large data sets and compare with supervised learning
 \end{itemize}
 \end{frame}
 
