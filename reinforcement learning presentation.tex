@@ -1,0 +1,171 @@
+\input{reinforcement_learning_presentation_preamble.tex}
+\begin{document}
+
+\begin{frame}[plain] 
+\titlepage
+\end{frame}
+
+\begin{frame}[plain]{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Neural Networks}
+\subsection{Simple Perceptron}
+
+\begin{frame}[plain]{Neural Network}
+\begin{figure}
+\includegraphics[width = 0.8 \textwidth]{"simple neural net no lines"}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[plain]{Neural Network}
+\begin{figure}
+\includegraphics[width = 0.8 \textwidth]{"simple neural net half lines"}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[plain]{Neural Network}
+\begin{figure}
+\includegraphics[width = 0.8 \textwidth]{"simple neural net all lines"}
+\end{figure}
+\end{frame}
+
+
+\subsection{Multilayer Perceptron}
+
+
+\begin{frame}[plain]{Multilayer Perceptron}
+\begin{figure}
+\includegraphics[width = 0.8 \textwidth]{"mlp all lines"}
+\end{figure}
+\end{frame}
+
+\subsection{Convolutional Neural Network}
+
+
+\begin{frame}[plain]{Convolutional Neural Network}
+\begin{figure}
+\includegraphics[width = 0.8 \textwidth]{"cnn"}
+\end{figure}
+\end{frame}
+
+\section{Machine Learning}
+
+\begin{frame}[plain]{Supervised Learning vs Reinforcement Learning}
+\begin{itemize}
+\item Supervised Learning
+\begin{itemize}
+\item Have access to a large set of data with known desired results
+\item Adjust model parameters to minimize an objective function
+\end{itemize}
+\item Reinforcement Learning
+\begin{itemize}
+\item Have access to an environment that can be modeled
+\item Typically a reward function is used as a signal for how to adjust model parameters
+\item Board games present a natural environment that is easily modeled and can provide a reward whenever a game finishes.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Neural Networks}
+\subsection{Simple Perceptron}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[width=0.8 \textwidth]{"simple neural net no lines"}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[width=0.8 \textwidth]{"simple neural net half lines"}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[width=0.8 \textwidth]{"simple neural net all lines"}
+\end{figure}
+\end{frame}
+
+\subsection{Multilayer Perceptron}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[width=0.8 \textwidth]{"mlp all lines"}
+\end{figure}
+\end{frame}
+
+\subsection{Convolutional Neural Network}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[width=0.8 \textwidth]{"CNN"}
+\end{figure}
+\end{frame}
+
+\begin{frame}[plain]{Value Network}
+\begin{itemize}
+\item A value network is a neural network that evaluates an environment and determines a value to associate to it
+\item In the case of board games, a value network can be used to determine the probability of winning from any given position
+\item Here is an example of a multi-layered neural network in action
+\item The network takes a Tic Tac Toe board as input, and through a succession of node activations the network outputs a prediction on who will win, in this case: the red player
+\end{itemize}
+\begin{figure}
+\includegraphics[width=1. \textwidth]{network_weights}
+\end{figure}
+\end{frame}
+
+\section{Temporal Difference Learning}
+
+\begin{frame}
+\begin{itemize}
+\item TD($\lambda$) Equation
+\end{itemize}
+\begin{equation*}
+T_n = \phantom{\sum_{n=0}^{N_0} }(1-\lambda)\phantom{\lambda^n} V_n + \lambda^{\phantom{N_0}} r
+\end{equation*}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item TD($\lambda$) Equation
+\end{itemize}
+\begin{equation*}
+T_n = \sum_{n=0}^{N_0} (1-\lambda)\lambda^n V_n + \lambda^{N_0} r
+\end{equation*}
+\end{frame}
+\section{results}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[width=1 \textwidth]{reinforcement_ttt}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[width=1 \textwidth]{reinforcement_c4}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[width=0.70 \textwidth]{round_robin}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[width=1.0 \textwidth]{performance}
+\end{figure}
+\end{frame}
+
+\section{The End}
+\begin{frame}[c]{The End}\centering
+\huge The End
+\end{frame}
+
+\end{document}
