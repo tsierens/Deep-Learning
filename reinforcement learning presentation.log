@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.2.24)  5 MAY 2016 03:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.2.24)  5 MAY 2016 03:40
 entering extended mode
 **reinforcement*learning*presentation.tex
 
@@ -1260,6 +1260,9 @@ Package pdftex.def Info: "simple neural net no lines".png used on input line 37
 .
 (pdftex.def)             Requested size: 245.83282pt x 189.95143pt.
 
+Overfull \vbox (8.4809pt too high) detected at line 37
+ []
+
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 37.
@@ -1275,7 +1278,11 @@ File: "simple neural net half lines".png Graphic file (type png)
 Package pdftex.def Info: "simple neural net half lines".png used on input line 
 43.
 (pdftex.def)             Requested size: 245.83282pt x 189.95143pt.
- [5
+
+Overfull \vbox (8.4809pt too high) detected at line 43
+ []
+
+[5
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
 ing/Deep-Learning/simple neural net half lines.png>]
@@ -1286,17 +1293,25 @@ File: "simple neural net all lines".png Graphic file (type png)
 Package pdftex.def Info: "simple neural net all lines".png used on input line 4
 9.
 (pdftex.def)             Requested size: 245.83282pt x 189.95143pt.
- [6
+
+Overfull \vbox (8.4809pt too high) detected at line 49
+ []
+
+[6
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
-ing/Deep-Learning/simple neural net all lines.png>] <"mlp all lines".png, id=14
-4, 993.7125pt x 767.86874pt>
+ing/Deep-Learning/simple neural net all lines.png>]
+<"mlp all lines".png, id=144, 993.7125pt x 767.86874pt>
 File: "mlp all lines".png Graphic file (type png)
 
 <use "mlp all lines".png>
 Package pdftex.def Info: "mlp all lines".png used on input line 57.
 (pdftex.def)             Requested size: 245.83282pt x 189.95143pt.
- [7
+
+Overfull \vbox (8.4809pt too high) detected at line 57
+ []
+
+[7
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
 ing/Deep-Learning/mlp all lines.png>]
@@ -1305,11 +1320,15 @@ File: "CNN".png Graphic file (type png)
  <use "CNN".png>
 Package pdftex.def Info: "CNN".png used on input line 65.
 (pdftex.def)             Requested size: 245.83282pt x 189.95143pt.
- [8
+
+Overfull \vbox (8.4809pt too high) detected at line 65
+ []
+
+[8
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
-ing/Deep-Learning/CNN.png>] <network_weights.png, id=179, 855.94781pt x 181.427
-81pt>
+ing/Deep-Learning/CNN.png>]
+<network_weights.png, id=179, 855.94781pt x 181.42781pt>
 File: network_weights.png Graphic file (type png)
 
 <use network_weights.png>
@@ -1406,7 +1425,7 @@ s8.pfb><C:/Program Files/MiKTeX 2.9reinstall/fonts/type1/public/amsfonts/cm/cms
 si10.pfb><C:/Program Files/MiKTeX 2.9reinstall/fonts/type1/public/amsfonts/cm/c
 mssi8.pfb><C:/Program Files/MiKTeX 2.9reinstall/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb>
-Output written on "reinforcement learning presentation.pdf" (16 pages, 760564 b
+Output written on "reinforcement learning presentation.pdf" (16 pages, 762379 b
 ytes).
 PDF statistics:
  361 PDF objects out of 1000 (max. 8388607)

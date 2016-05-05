@@ -5,5 +5,5 @@
 \beamer@subsectionintoc {2}{2}{Multilayer Perceptron}{7}{0}{2}
 \beamer@subsectionintoc {2}{3}{Convolutional Neural Network}{8}{0}{2}
 \beamer@sectionintoc {3}{Temporal Difference Learning}{10}{0}{3}
-\beamer@sectionintoc {4}{results}{12}{0}{4}
+\beamer@sectionintoc {4}{Results}{12}{0}{4}
 \beamer@sectionintoc {5}{The End}{16}{0}{5}
