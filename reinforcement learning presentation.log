@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.2.24)  5 MAY 2016 11:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.2.24)  5 MAY 2016 11:09
 entering extended mode
 **reinforcement*learning*presentation.tex
 
@@ -1392,19 +1392,7 @@ Package pdftex.def Info: performance.png used on input line 136.
  [16
 
  <C:/Users/Todd/Dropbox/Data Incubator Challenge April/deep_learning/Deep-Learn
-ing/Deep-Learning/performance.png>]
-! Undefined control sequence.
-\beamer@doifinframe ...tc. \end {itemize} \itetem 
-                                                  Route finding app \item Tr...
-l.151 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[17
+ing/Deep-Learning/performance.png>] [17
 
 ]
 \tf@nav=\write6
@@ -1428,10 +1416,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
  ) 
 Here is how much of TeX's memory you used:
- 23106 strings out of 493921
- 460636 string characters out of 3147285
+ 23105 strings out of 493921
+ 460630 string characters out of 3147285
  510442 words of memory out of 3000000
- 25891 multiletter control sequences out of 15000+200000
+ 25890 multiletter control sequences out of 15000+200000
  11735 words of font info for 43 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  58i,19n,60p,10525b,754s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1445,7 +1433,7 @@ pfb><C:/Program Files/MiKTeX 2.9reinstall/fonts/type1/public/amsfonts/cm/cmss10
 i10.pfb><C:/Program Files/MiKTeX 2.9reinstall/fonts/type1/public/amsfonts/cm/cm
 ssi8.pfb><C:/Program Files/MiKTeX 2.9reinstall/fonts/type1/public/amsfonts/cm/c
 msy10.pfb>
-Output written on "reinforcement learning presentation.pdf" (17 pages, 871033 b
+Output written on "reinforcement learning presentation.pdf" (17 pages, 871032 b
 ytes).
 PDF statistics:
  558 PDF objects out of 1000 (max. 8388607)
