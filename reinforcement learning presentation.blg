@@ -1,5 +1,5 @@
-[0] Config.pm:361> INFO - This is Biber 1.5
-[0] Config.pm:364> INFO - Logfile is 'reinforcement learning presentation.blg'
-[71] biber-MSWIN:190> INFO - === %a %b %e, %Y, %H:%M:%S
-[143] Utils.pm:183> ERROR - Cannot find control file 'reinforcement learning presentation.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
-[143] Biber.pm:111> INFO - ERRORS: 1
+This is BibTeX, Version 0.99dThe top-level auxiliary file: reinforcement learning presentation.aux
+I found no \citation commands---while reading file reinforcement learning presentation.aux
+I found no \bibdata command---while reading file reinforcement learning presentation.aux
+I found no \bibstyle command---while reading file reinforcement learning presentation.aux
+(There were 3 error messages)
