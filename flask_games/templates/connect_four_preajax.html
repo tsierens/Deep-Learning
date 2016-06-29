@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Connect Four</title>
+
+        <style>
+            canvas {
+                position: absolute;
+                margin: auto;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+            }
+            <script type=text/javascript src="{{
+            url_for('static', filename='jquery.js') }}"></script>
+
+        </style>
+        <div align = "center">
+            <h1> Connect Four</h1>
+
+
+        </div>
+
+        <!-- <a href="http://jquery.com/">jQuery</a>-->
+        <!-- <script src="jquery.js"></script> -->
+
+        <!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->
+
+        <script>
+
+            var canvas, ctx;
+            var data;
+            var tile_size = 60;
+            var padding = 15;
+            var cplayer = {{player|safe}};
+            var input_player = cplayer;
+            var evals = {{evals|safe}};
+            var board = {{board|safe}};
+            var depths = {{depths|safe}};
+            var types = {{types | safe}};
+            var finished= {{finished|safe}};
+            var message = "";
+            var move_type = "human"
+            var message_sent = false;
+            if (cplayer == 1){
+                move_type = types[0];
+            }
+            else{
+                move_type = types[1];
+            }
+            console.log(board);
+            console.log(depths);
+            console.log(types);
+            console.log(evals);
+            //var cplayer = 1;
+            //var board = [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+            //var finished = -2;
+            window.onload = function main() {
+
+                canvas = document.createElement("canvas");
+                canvas.width = (tile_size+padding)*7+padding;
+                canvas.height = (tile_size+padding)*6+padding;
+                ctx = canvas.getContext("2d");
+
+                document.body.appendChild(canvas);
+
+
+                init();
+
+                if (move_type == "human" || over()){
+                    canvas.addEventListener("mousedown", mouseDown);
+                }
+                else {
+                    sendData();
+                }
+
+                tick();
+            }
+
+            function init(){
+                if (data == null) {
+                    data =[];
+
+                    for (var i = 0; i < 42; i++){
+                        var x = (i % 7)*(tile_size+padding) + padding;
+                        var y = Math.floor(i / 7 + 0.01)*(tile_size+padding) + padding;
+                        data.push(new Tile(x,y));
+                    }
+                }
+                for (var i = board.length; i--;) {
+                    if (board[i] == 1){
+                        marker = Tile.EX;
+                    }
+                    if (board[i] == 0){
+                        marker = Tile.EMPTY;
+                    }
+                    if (board[i] == -1){
+                        marker = Tile.CIRCLE;
+                    }
+                    data[i].change(marker);
+                }
+                if (cplayer == 1){
+                    player = Tile.EX;
+                }
+
+                if (cplayer == -1){
+                    player = Tile.CIRCLE;
+                }
+                render();
+            }
+
+            function over(){
+                return finished == 1 || finished == 0 || finished == -1;
+            }
+
+
+
+            function tick(){
+                window.requestAnimationFrame(tick);
+                update();
+                render();
+            }
+            function update() {
+                for (var i = data.length; i--;) {
+                    data[i].update();
+                }
+            }
+
+            function render() {
+                //    ctx.clearRect(0,0,canvas.width,canvas.height);
+                for (var i = data.length; i--;) {
+                    data[i].draw(ctx);
+                }
+                if (over() && ! message_sent){
+                    if (finished ==1){
+                        message = "Player 1 is the winner!"}
+                    if (finished == 0){
+                        message = "It's a tie!"}
+                    if (finished == -1){
+                        message = "Player 2 is the winner!"}
+                    //window.alert(message);
+                    var message_type = document.createElement("H1");
+                    message_type.style.textAlign = "center";
+                    var message_body = document.createTextNode(message);
+                    message_type.appendChild(message_body);
+                    document.body.appendChild(message_type);
+                    message_sent = true
+                }
+
+            }
+            function sendData(move) {
+                var name,
+                    form = document.createElement("form"),
+                    node = document.createElement("input");
+
+
+                form.action = 'cccc';
+                form.target = "_self";
+                form.method = 'POST';
+
+                node.name = "player";
+                node.value = cplayer.toString();
+                form.appendChild(node.cloneNode());   
+                console.log(board)
+                node.name = "board";
+                node.value = board.toString();
+                form.appendChild(node.cloneNode());
+
+                node.name = "depths";
+                node.value = depths.toString();
+                form.appendChild(node.cloneNode());
+
+                node.name = "types";
+                node.value = types.toString();
+                form.appendChild(node.cloneNode());
+
+                node.name = "evals";
+                node.value = evals.toString();
+                form.appendChild(node.cloneNode());
+
+                form.style.display = "none";
+                document.body.appendChild(form);
+                form.submit();
+                document.body.removeChild(form);
+            }
+
+            function Tile(x,y) {
+
+                var x = x,  y = y;
+                var tile = Tile.EMPTY;
+
+                if (tile == null) {
+                    var canvas_element = document.createElement("canvas");
+                    canvas_element.width = canvas_element.height = tile_size;
+                    var canvas_ctx = canvas_element.getContext("2d");
+
+                    canvas_ctx.fillStyle = "#00FFFF";
+                    canvas_ctx.lineWidth = 4;
+                    canvas_ctx.lineCap = "round";
+
+                    //Empty
+                    canvas_ctx.fillRect(0,0,tile_size,tile_size);
+                    Tile.EMPTY = new Image();
+                    Tile.EMPTY.src = canvas_element.toDataURL();
+
+                    //Circle
+                    canvas_ctx.strokeStyle = "#606090";
+
+                    canvas_ctx.fillRect(0,0,tile_size,tile_size);
+
+                    canvas_ctx.beginPath();
+                    canvas_ctx.arc(tile_size/2,tile_size/2,tile_size/2 - padding,0,2*Math.PI);
+                    canvas_ctx.stroke();
+
+
+                    Tile.CIRCLE = new Image();
+                    Tile.CIRCLE.src = canvas_element.toDataURL();
+
+                    //EX
+                    canvas_ctx.strokeStyle = "#C04040"
+                    canvas_ctx.fillRect(0,0,tile_size,tile_size);
+
+                    canvas_ctx.beginPath();
+                    canvas_ctx.moveTo(padding,padding);
+                    canvas_ctx.lineTo(tile_size - padding,tile_size - padding);
+                    canvas_ctx.moveTo(tile_size - padding,padding);
+                    canvas_ctx.lineTo(padding,tile_size - padding);
+                    canvas_ctx.stroke();
+
+                    Tile.EX = new Image();
+                    Tile.EX.src = canvas_element.toDataURL();
+
+                    tile = Tile.EX;
+
+                }
+
+                this.update = function() {
+                }
+
+                this.change = function(next){
+                    tile = next;
+                }
+
+                this.draw = function(ctx) {
+                    ctx.drawImage(tile, x, y);
+                }
+
+                this.hasData = function(){
+                    return tile !== Tile.EMPTY;
+                }
+            }
+
+            function mouseDown(evt) {
+                var el = evt.target;
+
+                var px = evt.clientX - el.offsetLeft;
+                var py = evt.clientY - el.offsetTop;
+
+                if (px % (tile_size+padding) >= padding && py >=padding && py <= canvas.width-2*padding && cplayer == input_player && ! over()) {
+                    var idx = Math.floor(px / (padding+tile_size)) +42;
+                    for (var i = 0; i<8; i++){
+                        idx -= 7
+                        if (idx <0){
+                            return
+                        }
+                        if (! data[idx].hasData()){
+                            break;
+                        }
+                        if (data[idx].hasData()){
+                            continue;
+                        }
+                    }
+                    console.log(idx);
+                    data[idx].change(player);
+                    board[idx] = cplayer;
+                    cplayer = -1 * cplayer;
+                    player = player === Tile.CIRCLE ? Tile.EX : Tile.CIRCLE;
+
+
+                    var iframe = document.createElement("iframe");
+                    window.addEventListener("load",function(){
+                        iframe.style.display = "none";
+                        document.body.appendChild(iframe);
+                    });
+
+
+
+
+                    sendData(idx);
+                }
+
+
+                return
+            }
+
+
+
+        </script>
+
+
+
+    </head>
+
+
+    <body>
+        <div align = "center">
+            <div align = "center">
+                <button onclick="location.href = '/';"> Reset </button>
+            </div>
+        </div>
+
+        <div class = "col-md-2">
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </div>
+        <!--
+<div align = "center">
+<form id='move-input' method='post' action = 'index'>
+<p>
+Move   <input type='text' name='choice' />
+</p>
+
+<p>
+<input type='submit' value='Submit' />
+</p>
+</form>
+</div>
+-->
+    </body>

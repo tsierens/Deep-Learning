@@ -1,0 +1,10 @@
+name: ticker-tjr
+dependencies:
+    - nomkl
+    - numpy
+    - pandas
+    - bokeh 
+    - flask
+    - gunicorn
+    - Jinja2
+    - requests
