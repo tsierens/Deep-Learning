@@ -6,9 +6,12 @@
 import numpy as np
 import sys
 import time
+from itertools import compress
 
 def empty_board():
     return np.zeros((6,7))
+
+
 
 def get_all_fours(board):
     list_ = []
@@ -25,19 +28,36 @@ def get_all_fours(board):
     return list_
 
 def available_moves(board):
-    return [move for move in xrange(7) if not np.product(board[:,move])]
+    return list(compress(xrange(7), ~np.prod(board, axis=0).astype(bool)))
+
 
 def winner(board):
-    possible_wins = get_all_fours(board)
-    result = 0
-    for item in possible_wins:
-        if len(set(item)) == 1 and item[0] != 0:
-            result = item[0]
-            break
-    return result
+    rows = board[:,:4]+board[:,1:5]+board[:,2:6]+board[:,3:7]
+    if np.any(rows == 4) or np.any(rows == -4):
+        return 1 if np.any(rows==4) else -1
+    cols = board[:3,:]+board[1:4,:]+board[2:5,:]+board[3:6,:]
+    if np.any(cols == 4) or np.any(cols == -4):
+        return 1 if np.any(cols==4) else -1
+    diag = board[:3,:4]+board[1:4,1:5]+board[2:5,2:6]+board[3:6,3:7]
+    if np.any(diag == 4) or np.any(diag == -4):
+        return 1 if np.any(diag==4) else -1
+    rdiag = board[5:2:-1,:4]+board[4:1:-1,1:5]+board[3:0:-1,2:6]+board[2::-1,3:7]
+    if np.any(rdiag == 4) or np.any(rdiag == -4):
+        return 1 if np.any(rdiag==4) else -1
+    return 0
+
+
+#def winner(board):
+#    possible_wins = get_all_fours(board)
+#    result = 0
+#    for item in possible_wins:
+#        if len(set(item)) == 1 and item[0] != 0:
+#            result = item[0]
+#            break
+#    return result
 
 def is_full(board):
-    return np.product(board)
+    return not np.any(board==0)
 
 def game_over(board):
     return winner(board) or is_full(board)
